@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --light-gray: #cbcac6;
+    --gray: #afafaf;
+    --dark-gray: #929296;
+    --dark-gray-shadow: #858585;
+    --screen: #59692b;
+    --dark-gray-background: #6a6a74;
+    --dark-gray-background2: #0f1523;
+    --purple-pink: #991c58;
+    --purple-pink2: #7a3561;
+    --buttons-background: #a2a2a3;
+    --gameboy-shadow: #504c8f;
+    --red-battery: #920013;
+    --blue-text: #142390;
+}
+body {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.wrapper {
+    width: 306px;
+    height: 498px;
+    background: var(--light-gray);
+    border-radius: 12px 12px 50px 12px;
+    border: 6px solid #000;
+    box-shadow: 29px 20px 0px var(--gameboy-shadow);
+    position: relative;
+    overflow: hidden;
+    margin: 50px 0;
+}
+.wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 10px;
+    right: 10px;
+    background: var(--gray);
+    border-radius: 10px 10px 20px 10px;
+    z-index: 2;
+}
+.wrapper:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 10px;
+    left: 10px;
+    right: 0px;
+    background: var(--dark-gray);
+    z-index: 1;
+    border-radius: 10px 0px 0 10px;
+}
+.bottomCornerAngle {
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+    border-bottom: 60px solid var(--dark-gray);
+    border-left: 100px solid transparent;
+    z-index: 3;
+}
+.bottomShadow {
+    position: absolute;
+    bottom: -14px;
+    height: 20px;
+    left: 10px;
+    border-radius: 7px;
+    background: var(--dark-gray);
+    right: 0;
+    z-index: 4;
+}
+
+.topStripes {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 5px;
+    top: 23px;
+    background: #c8c8c8;
+    box-shadow: 0px -1px 0px #00000050;
+}
+.topStripes:before {
+    content: "";
+    position: absolute;
+    background: #c8c8c8;
+    box-shadow: 0px 0px -1px #00000050;
+    width: 4px;
+    height: 25px;
+    left: 27px;
+    top: -25px;
+}
+.topStripes:after {
+    content: "";
+    position: absolute;
+    background: #c8c8c8;
+    box-shadow: 0px 0px -1px #00000050;
+    width: 4px;
+    height: 25px;
+    right: 27px;
+    top: -25px;
+}
+
+.screenWrapper {
+    position: absolute;
+    top: 50px;
+    width: 222px;
+    height: 177px;
+    left: 36px;
+    border: 4px solid #000;
+    background: var(--dark-gray-background);
+    border-radius: 5px 5px 30px 5px;
+    z-index: 6;
+}
+.screen {
+    position: absolute;
+    top: 25px;
+    left: 37px;
+    background: var(--screen);
+    border: 4px solid #000;
+    width: 140px;
+    height: 130px;
+}
+
+.screen:before {
+    content: "";
+    position: absolute;
+    background: var(--purple-pink2);
+    height: 4px;
+    left: -32px;
+    width: 100px;
+    top: -20px;
+    border-radius: 2px;
+}
+
+.screen:after {
+    content: "";
+    position: absolute;
+    background: var(--purple-pink2);
+    height: 4px;
+    right: -28px;
+    width: 34px;
+    top: -20px;
+    border-radius: 2px;
+}
+
+.screen span:before {
+    content: "";
+    position: absolute;
+    background: var(--blue-text);
+    height: 4px;
+    left: -32px;
+    width: 100px;
+    top: -15px;
+    border-radius: 2px;
+}
+
+.screen span:after {
+    content: "";
+    position: absolute;
+    background: var(--blue-text);
+    height: 4px;
+    right: -28px;
+    width: 34px;
+    top: -15px;
+    border-radius: 2px;
+}
+
+.battery {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--red-battery);
+    border-radius: 5px;
+    right: 200px;
+    top: 60px;
+    box-shadow: 0 0 5px 0px var(--red-battery), 0 0 2px 0px #ffffff;
+}
+
+.linesBelowScreen {
+    position: absolute;
+    height: 4px;
+    left: 36px;
+    width: 223px;
+    top: 249px;
+    z-index: 6;
+}
+.horizontal_1 {
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--blue-text);
+}
+
+.vertical_base {
+    position: absolute;
+    border-radius: 2px;
+    background: var(--blue-text);
+    width: 4px;
+    height: 12px;
+    top: -4px;
+}
+.vertical_1 {
+    left: 65px;
+    transform: rotate(20deg);
+}
+.vertical_2 {
+    left: 75px;
+    transform: rotate(20deg);
+}
+.vertical_3 {
+    left: 85px;
+    transform: rotate(20deg);
+}
+.vertical_4 {
+    left: 95px;
+    transform: rotate(20deg);
+}
+.vertical_5 {
+    left: 105px;
+    transform: rotate(20deg);
+}
+.vertical_6 {
+    left: 115px;
+    transform: rotate(20deg);
+}
+.vertical_7 {
+    left: 125px;
+    transform: rotate(20deg);
+}
+.vertical_8 {
+    left: 135px;
+    transform: rotate(20deg);
+}
+
+.vertical_9 {
+    left: 145px;
+    transform: rotate(20deg);
+}
+
+.stripesRow {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 9px;
+    z-index: 6;
+    z-index: 6;
+    transform: rotate(150deg);
+}
+
+.stripesRow .stripe {
+    border-radius: 6px;
+    background: #000;
+    min-width: 6px;
+    height: 30px;
+    margin-right: 9px;
+    max-width: 6px;
+}
+
+.joystickWrapper {
+    position: absolute;
+    bottom: 100px;
+    left: 35px;
+    background: var(--buttons-background);
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    z-index: 6;
+}
+
+.joystick_1 {
+    position: absolute;
+    top: 12px;
+    left: 41px;
+    width: 25px;
+    height: 80px;
+    background: var(--dark-gray-background2);
+    border: 4px solid #000;
+    border-radius: 9px;
+}
+
+.joystick_2 {
+    position: absolute;
+    top: 40px;
+    left: 14px;
+    width: 80px;
+    height: 25px;
+    background: var(--dark-gray-background2);
+    border: 4px solid #000;
+    border-radius: 9px;
+}
+
+.joystick_2:after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 27px;
+    height: 25px;
+    width: 17px;
+    background: var(--dark-gray-background2);
+}
+
+.buttonsWrap {
+    position: absolute;
+    bottom: 131px;
+    right: 28px;
+    background: var(--buttons-background);
+    border-radius: 100px;
+    width: 91px;
+    height: 42px;
+    z-index: 6;
+    transform: rotate(150deg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 5px 5px 5px;
+}
+.button {
+    background: var(--purple-pink);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 4px solid #000;
+}
+
+.outlineButton_1 {
+    width: 40px;
+    height: 13px;
+    position: absolute;
+    left: 105px;
+    bottom: 60px;
+    transform: rotate(150deg);
+    border: 4px solid #000;
+    border-radius: 8px;
+    z-index: 6;
+    background-color: var(--dark-gray-background2);
+}
+
+.outlineButton_2 {
+    width: 40px;
+    height: 13px;
+    position: absolute;
+    left: 150px;
+    bottom: 60px;
+    transform: rotate(150deg);
+    border: 4px solid #000;
+    border-radius: 8px;
+    z-index: 6;
+    background-color: var(--dark-gray-background2);
+}
